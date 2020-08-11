@@ -31,23 +31,23 @@ from sedenbot import bot, CMD_HELP, me
 from sedenbot.events import sedenify
 
 DIZCILIK_STR = [
-    "Çıkartmayı dızlıyorum...",
-    "Yaşasın dızcılık...",
-    "Bu çıkartmayı kendi paketime davet ediyorum...",
-    "Bunu dızlamam lazım...",
-    "Hey bu güzel bir çıkartma!\nHemen dızlıyorum...",
-    "Çıkartmanı dızlıyorum\nhahaha.",
-    "Hey şuraya bak. (☉｡☉)!→\nBen bunu dızlarken...",
-    "Güller kırmızı menekşeler mavi, bu çıkartmayı paketime dızlayarak havalı olacağım...",
-    "Çıkartma hapsediliyor...",
-    "Bay dızcı bu çıkartmayı dızlıyor... ",
-    "Sonunda Ecem'in seveceği bir çıkartma dızlıyorum...",
-    "Ecem, bu dız senin için...",
+    "Bir an bin yıl, bir söz bin ah",
+    "Çok yorgunum, Beni bekleme kaptan",
+    "Her ilaç biraz zehir, her zehir biraz ölüm, Ve sonunda ben bugün öldüm",
+    "İşte ben tam bu yüzden yarım kaldım, yarım, Hep yarım",
+    "Sen beni anlasan ben de seni ,Sen beni dinlesen ben de seni, Daha çok parçalanmadan ,Daha çok ruh kaybolmadan, Sen beni affet ben de seni",
+    "Alnımdan akan ter, Sana hiç değmedi, Gözümden damlayan yaş, Denizi bulmadı",
+    "Ve sen, ben değirmenlere karşı bile bile birer yitik savaşçı",
+    "Elbette ağlarım, Benim can kırıklarım var",
+    "Önümde ağır bir kapı, Ardında okyanus var, Ben zaten suda doğmuşum",
+    "Neden böyle olmuşuz nerelerde kaybolmuşuz, Aklımdaki soruların hepsini soracaktım",
+    "Bak çiçeklere kış ortasından güneş açıyor, İnsan bir yalanın arkasından gelip koşuyor, Kendi sözlerinin ardında zor duruyor, Kah düğün kah cenaze oldu hayat geçiyor",
+    "Zaman geçmek bilmez önce, Sonra yıllar sayamazsın, Bir bakmışsın geçip gitmiş, Hayat,",
+    "Şebnem belki görür",
 ]
 
-@sedenify(outgoing=True, pattern="^.(d[ıi]zla|kang)")
+@sedenify(outgoing=True, pattern="^.(ben[ıi]mol|kang)")
 async def dizla(args):
-    """ .dızla komutu çıkartmaları başka paketten alır ya da yeni bir çıkartma oluşturur. """
     user = me
     if not user.username:
         user.username = user.first_name
@@ -104,8 +104,8 @@ async def dizla(args):
                 # Kullanıcı sadece özel emoji istedi, varsayılan pakete eklemek istiyor.
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.username}_{pack}"
-        packnick = f"@{user.username}'s UserBot pack {pack}"
+        packname = f"belali_pack_{pack}"
+        packnick = f"OgiWorld - belali  {pack}"
         cmd = '/newpack'
         file = BytesIO()
 
@@ -244,13 +244,11 @@ async def dizla(args):
                 # Kullanıcının sürekli bildirim almamasını sağlar.
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"`Çıkartma başarıyla pakete eklendi.`\
-            \nPaket [şurada](t.me/addstickers/{packname}) bulunabilir.",
+        await args.edit(f"`Sonunda İsa'yı güldürecek bir sticker <3 [görmek](https://telegram.me/addstickers/{pname}) için bas`",
                         parse_mode='md')
 
 
 async def resize_photo(photo):
-    """ Fotoğrafı 512x512 boyutuna getirir. """
     image = Image.open(photo)
     maxsize = (512, 512)
     if (image.width and image.height) < 512:
