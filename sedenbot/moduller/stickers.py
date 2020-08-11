@@ -244,7 +244,7 @@ async def dizla(args):
                 # Kullanıcının sürekli bildirim almamasını sağlar.
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"`Sonunda İsa'yı güldürecek bir sticker <3 [görmek](https://telegram.me/addstickers/{packname}) için bas`",
+        await args.edit(f"Sonunda İsa'yı güldürecek bir sticker <3 [görmek](https://telegram.me/addstickers/{packname}) için bas",
                         parse_mode='md')
 
 
