@@ -6,7 +6,7 @@
 * Bu bota daha destek verilmeyecektir. Yeni yaptığımız projemize [buradan](https://github.com/TeamDerUntergang/Telegram-SedenUserBot) erişebilirsiniz.
 
 ### # Heroku Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeamDerUntergang/Telegram-UserBot/tree/seden)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xpressqt/Telegram-UserBot/tree/seden)
 
 ```
 #include <std/disclaimer.h>
