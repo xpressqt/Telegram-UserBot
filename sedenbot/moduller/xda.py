@@ -64,7 +64,7 @@ XDA_STRINGS = [
     "send moni",
     "bad rom",
     "dot",
-    "rr",
+    "xd",
     "linage",
     "arrows",
     "kernal",
