@@ -69,7 +69,7 @@ BOTLOG_CHATID = environ.get("BOTLOG_CHATID", None)
 BOTLOG_CHATID = int(BOTLOG_CHATID) if BOTLOG_CHATID and resr('^-?\d+$', BOTLOG_CHATID) else None
 
 # Alive Mesajını değiştirme.
-ALIVE_MESAJI = environ.get("belali - burda")
+ALIVE_MESAJI = environ.get("ALIVE_MESAJI", "belali - burda")
 
 # UserBot günlükleme özelliği.
 BOTLOG = sb(environ.get("BOTLOG", "False"))
