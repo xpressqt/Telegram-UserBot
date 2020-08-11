@@ -163,7 +163,6 @@ PM_UNAPPROVED = environ.get("PM_UNAPPROVED", None)
 CMD_HELP = {}
 
 """
-
 """
 
 # 'bot' değişkeni
